@@ -32,7 +32,7 @@ function App() {
             <Link to="/section"  > Section </Link>
             <Link to="/axiosapicall" >AxiosAPICall</Link>
             <Link to="/context" >Context</Link>
-            <Link to="ref"> Ref Component  </Link>
+            <Link to="ref">Use Ref   </Link>
 
 
             <Routes>

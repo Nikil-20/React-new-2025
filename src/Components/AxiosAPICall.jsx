@@ -57,6 +57,8 @@ const AxiosAPICall = () => {
                     
                 </tbody>
             </table>
+
+            <h1> hi go to rapid api website take aa api of any book then subscribe it then copy code of javascript and axiosapi of that api and paste above   </h1>
             </div>
     )
 }
