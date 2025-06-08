@@ -25,7 +25,6 @@ const APICall = () => {
             <table className='min-w-full divide-y divide-gray-200 border border-gray-300 shadow-md rounded-md'  >
                 <thead>
                     <tr>
-                        <th className='px-4 py-2 text-left text-sm font-semibold text-gray-700 border border-black-400' >UserID</th>
                         <th className='px-4 py-2 text-left text-sm font-semibold text-gray-700 border border-black-400' >ID</th>
                         <th className='px-4 py-2 text-left text-sm font-semibold text-gray-700 border border-black-400' >Title</th>
                         <th className='px-4 py-2 text-left text-sm font-semibold text-gray-700 border border-black-400' >Body</th>
@@ -35,7 +34,6 @@ const APICall = () => {
                     {
                         data.map((post) => (
                             <tr>
-                                <td className='px-4 py-2 text-left text-sm font-semibold text-gray-700 border border-black-400' > {post.userId}  </td>
                                 <td className='px-4 py-2 text-left text-sm font-semibold text-gray-700 border border-black-400' > {post.id}  </td>
                                 <td className='px-4 py-2 text-left text-sm font-semibold text-gray-700 border border-black-400' > {post.title}  </td>
                                 <td className='px-4 py-2 text-left text-sm font-semibold text-gray-700 border border-black-400' > {post.body} </td>

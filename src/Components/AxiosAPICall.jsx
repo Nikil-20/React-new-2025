@@ -8,10 +8,10 @@ const AxiosAPICall = () => {
     const getDataOfBooks = async() => {
         const options = {
             method: 'GET',
-            url: 'https://hapi-books.p.rapidapi.com/month/2024/3',
+            url: 'https://freebooks-api2.p.rapidapi.com/fetchEbooks/horror/2',
             headers: {
-                'x-rapidapi-key': 'c3bfc57163mshe3e68b1a54ea4adp147dabjsn29dc6b3ea246',
-                'x-rapidapi-host': 'hapi-books.p.rapidapi.com'
+                'x-rapidapi-key': '0b4d1e136amsh2dac5076bb7e6e2p1a148bjsna573089b103f',
+                'x-rapidapi-host': 'freebooks-api2.p.rapidapi.com'
             }
         };
 
@@ -39,16 +39,18 @@ const AxiosAPICall = () => {
                     <tr>
                         <th>Sr.No.</th>
                         <th>Title</th>
-                        <th>rating</th>
+                        <th>Lanuage</th>
+                        <th>Year</th>
                     </tr>
                 </thead>
                 <tbody>
                     {
-                        data.map((book) => (
+                        data.map((book,index) => (
                             <tr>
-                                <td> {book.position} </td>
-                                <td> {book.name} </td>
-                                <td> {book.rating}  </td>
+                                <td> {index + 1} </td>
+                                <td> {book.title} </td>
+                                <td> {book.language}  </td>
+                                <td> {book.year} </td>
                             </tr>
                         ))
                     }

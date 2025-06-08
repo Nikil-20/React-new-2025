@@ -7,6 +7,11 @@ import { Header } from './Components/Header'
 import Home from './Components/Home'
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom'
 import AxiosAPICall from './Components/AxiosAPICall'
+import { createContext } from 'react'
+import SinglePost from './Components/SinglePost'
+import LoginContextProvider from './Contexts/LoginContextProvider'
+import RefComp from './Components/RefComp'
+
 
 
 
@@ -16,32 +21,36 @@ function App() {
 
   return (
     <>
-      {/* <div> <Section/> </div>
-    <Conditional/> */}
+      <LoginContextProvider>
 
-      {/* <APICall/> */}
+        <div>
+          <Router >
+            <Link to="/" >Home</Link>
+            <Link to="/header"  >Header</Link>
+            <Link to="/apiCall"  >API Call</Link>
+            <Link to="/conditional"  >Conditional</Link>
+            <Link to="/section"  > Section </Link>
+            <Link to="/axiosapicall" >AxiosAPICall</Link>
+            <Link to="/context" >Context</Link>
+            <Link to="ref"> Ref Component  </Link>
 
 
-      <Router >
-        <Link to="/" >Home</Link>
-        <Link to="/header"  >Header</Link>
-        <Link to="/apiCall"  >API Call</Link>
-        <Link to="/conditional"  >Conditional</Link>
-        <Link to="/section"  > Section </Link>
-        <Link to="/axiosapicall" >AxiosAPICall</Link>
+            <Routes>
+              <Route index element={<Home />}  ></Route>
+              <Route path='header' element={<Header />} ></Route>
+              <Route path='apiCall' element={<APICall />} ></Route>
+              <Route path='conditional' element={<Conditional />}  ></Route>
+              <Route path='section' element={<Section />}  ></Route>
+              <Route path='axiosapicall' element={<AxiosAPICall />}  ></Route>
+              <Route path='context' element={<SinglePost />}  ></Route>
+              <Route path='ref'  element={<RefComp />}   ></Route>
 
-        <Routes>
-          <Route index  element={<Home/>}  ></Route>
-          <Route path='header' element={<Header />} ></Route>
-          <Route path='apiCall' element={<APICall />} ></Route>
-          <Route path='conditional' element={<Conditional/>}  ></Route>
-          <Route path='section' element={<Section/>}  ></Route>
-          <Route path='axiosapicall'element={<AxiosAPICall/>}  ></Route>
-          
-        </Routes>
+            </Routes>
 
-      </Router>
+          </Router>
+        </div>
 
+      </LoginContextProvider>
 
     </>
   )
