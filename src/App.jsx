@@ -1,8 +1,10 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import {Header,Header2,Header3} from './Components/Header'
+import Section from './Components/Section'
 import './App.css'
+import Conditional from './Components/Conditional'
+import APICall from './Components/APICall'
+import { Header } from './Components/Header'
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom'
 
 
 
@@ -12,11 +14,24 @@ function App() {
 
   return (
     <>
-    <div>hello world</div>
-    <div> <Header/>  </div>
-    <div> <Header2/>  </div>
-    <div>  <Header3/> </div>
-    
+      {/* <div> <Section/> </div>
+    <Conditional/> */}
+
+      {/* <APICall/> */}
+{/* 
+      <Router>
+        <link to="/header"  >Header</link>
+        <link to="/apiCall"  >API Call</link>
+
+        <Routes>
+          <Route path='header' element={<Header />} ></Route>
+          <Route path='apiCall' element={<APICall />} ></Route>
+
+        </Routes>
+
+      </Router> */}
+
+      <div> <APICall/> </div>
 
     </>
   )

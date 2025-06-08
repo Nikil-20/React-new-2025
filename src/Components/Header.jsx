@@ -1,5 +1,5 @@
 
-
+import "./Header.css"
 
 
 
@@ -8,7 +8,7 @@ function Header() {
 
   return (
     <>
-    <div>this is my header from web app</div>
+    <nav  >this is my header from web app</nav>
 
     </>
   )
@@ -17,18 +17,12 @@ function Header() {
 function Header2(){
     return (
         <>
-        <div>this is my header 2</div>
+        <nav>this is my header 2</nav>
         </>
     )
 }
 
-function Header3(){
-    return (
-        <>
-        <div>this is my header 3</div>
-        </>
-    )
-}
 
-export  {Header,Header2, Header3}
+
+export  {Header,Header2}
 
