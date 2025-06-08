@@ -6,6 +6,7 @@ import APICall from './Components/APICall'
 import { Header } from './Components/Header'
 import Home from './Components/Home'
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom'
+import AxiosAPICall from './Components/AxiosAPICall'
 
 
 
@@ -27,6 +28,7 @@ function App() {
         <Link to="/apiCall"  >API Call</Link>
         <Link to="/conditional"  >Conditional</Link>
         <Link to="/section"  > Section </Link>
+        <Link to="/axiosapicall" >AxiosAPICall</Link>
 
         <Routes>
           <Route index  element={<Home/>}  ></Route>
@@ -34,6 +36,8 @@ function App() {
           <Route path='apiCall' element={<APICall />} ></Route>
           <Route path='conditional' element={<Conditional/>}  ></Route>
           <Route path='section' element={<Section/>}  ></Route>
+          <Route path='axiosapicall'element={<AxiosAPICall/>}  ></Route>
+          
         </Routes>
 
       </Router>
