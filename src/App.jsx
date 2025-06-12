@@ -11,6 +11,7 @@ import { createContext } from 'react'
 import SinglePost from './Components/SinglePost'
 import LoginContextProvider from './Contexts/LoginContextProvider'
 import RefComp from './Components/RefComp'
+import ReducerEx from './Components/ReducerEx'
 
 
 
@@ -32,7 +33,8 @@ function App() {
             <Link to="/section"  > Section </Link>
             <Link to="/axiosapicall" >AxiosAPICall</Link>
             <Link to="/context" >Context</Link>
-            <Link to="ref">Use Ref   </Link>
+            <Link to="/ref">Use Ref   </Link>
+            <Link to="/reducerex"> ReducerEx  </Link>
 
 
             <Routes>
@@ -44,7 +46,8 @@ function App() {
               <Route path='axiosapicall' element={<AxiosAPICall />}  ></Route>
               <Route path='context' element={<SinglePost />}  ></Route>
               <Route path='ref'  element={<RefComp />}   ></Route>
-
+              <Route path='reducerex' element={<ReducerEx/>}  > </Route>
+ 
             </Routes>
 
           </Router>
