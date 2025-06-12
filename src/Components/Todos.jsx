@@ -18,14 +18,9 @@ const Todos = () => {
             <li key={todo.id}>{todo.text}
             <button onClick={() => dispatch(removeTodo(todo.id))}  className='border-2 p-1 m-1 rounded-md bg-green-500' >delete</button>
             </li>
-
-        ))
-        
-        
+        )) 
     }
-    </ul>
-   
-   
+    </ul> 
    </>
   )
 }
