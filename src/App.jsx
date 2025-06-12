@@ -12,6 +12,9 @@ import SinglePost from './Components/SinglePost'
 import LoginContextProvider from './Contexts/LoginContextProvider'
 import RefComp from './Components/RefComp'
 import ReducerEx from './Components/ReducerEx'
+import Todos from './Components/Todos'
+import { store } from './store/store'
+import { Provider } from 'react-redux'
 
 
 
@@ -19,44 +22,47 @@ import ReducerEx from './Components/ReducerEx'
 
 
 function App() {
-
   return (
-    <>
-      <LoginContextProvider>
+    <Provider store={store}  >
 
-        <div>
-          <Router >
-            <Link to="/" >Home</Link>
-            <Link to="/header"  >Header</Link>
-            <Link to="/apiCall"  >API Call</Link>
-            <Link to="/conditional"  >Conditional</Link>
-            <Link to="/section"  > Section </Link>
-            <Link to="/axiosapicall" >AxiosAPICall</Link>
-            <Link to="/context" >Context</Link>
-            <Link to="/ref">Use Ref   </Link>
-            <Link to="/reducerex"> ReducerEx  </Link>
+        <LoginContextProvider>
+
+          <div>
+            <Router >
+              <Link to="/" >Home</Link>
+              <Link to="/header"  >Header</Link>
+              <Link to="/apiCall"  >API Call</Link>
+              <Link to="/conditional"  >Conditional</Link>
+              <Link to="/section"  > Section </Link>
+              <Link to="/axiosapicall" >AxiosAPICall</Link>
+              <Link to="/context" >Context</Link>
+              <Link to="/ref">Use Ref   </Link>
+              <Link to="/reducerex"> ReducerEx  </Link>
+              <Link to="/redux">Redux Toolkit</Link>
 
 
-            <Routes>
-              <Route index element={<Home />}  ></Route>
-              <Route path='header' element={<Header />} ></Route>
-              <Route path='apiCall' element={<APICall />} ></Route>
-              <Route path='conditional' element={<Conditional />}  ></Route>
-              <Route path='section' element={<Section />}  ></Route>
-              <Route path='axiosapicall' element={<AxiosAPICall />}  ></Route>
-              <Route path='context' element={<SinglePost />}  ></Route>
-              <Route path='ref'  element={<RefComp />}   ></Route>
-              <Route path='reducerex' element={<ReducerEx/>}  > </Route>
- 
-            </Routes>
+              <Routes>
+                <Route index element={<Home />}  ></Route>
+                <Route path='header' element={<Header />} ></Route>
+                <Route path='apiCall' element={<APICall />} ></Route>
+                <Route path='conditional' element={<Conditional />}  ></Route>
+                <Route path='section' element={<Section />}  ></Route>
+                <Route path='axiosapicall' element={<AxiosAPICall />}  ></Route>
+                <Route path='context' element={<SinglePost />}  ></Route>
+                <Route path='ref' element={<RefComp />}   ></Route>
+                <Route path='reducerex' element={<ReducerEx />}  > </Route>
+                <Route path='redux' element={<Todos />}  ></Route>
 
-          </Router>
-        </div>
+              </Routes>
 
-      </LoginContextProvider>
+            </Router>
+          </div>
 
-    </>
-  )
+        </LoginContextProvider>
+      </Provider>
+
+
+  );
 }
 
 export default App
