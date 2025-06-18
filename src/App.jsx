@@ -15,6 +15,8 @@ import ReducerEx from './Components/ReducerEx'
 import Todos from './Components/Todos'
 import { store } from './store/store'
 import { Provider } from 'react-redux'
+import LayoutEffect from './Components/LayoutEffect'
+import MemoEx from './Components/MemoEx'
 
 
 
@@ -39,6 +41,8 @@ function App() {
               <Link to="/ref">Use Ref   </Link>
               <Link to="/reducerex"> ReducerEx  </Link>
               <Link to="/redux">Redux Toolkit</Link>
+              <Link to="/layouteffect"> Layout Effect </Link>
+              <Link to="/memoex"  >MemeoEX</Link>
 
 
               <Routes>
@@ -52,6 +56,8 @@ function App() {
                 <Route path='ref' element={<RefComp />}   ></Route>
                 <Route path='reducerex' element={<ReducerEx />}  > </Route>
                 <Route path='redux' element={<Todos />}  ></Route>
+                <Route path='layouteffect' element={<LayoutEffect></LayoutEffect>} ></Route>
+                <Route path='memoex' element={<MemoEx></MemoEx>} ></Route>
 
               </Routes>
 
