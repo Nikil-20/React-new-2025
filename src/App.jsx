@@ -17,6 +17,8 @@ import { store } from './store/store'
 import { Provider } from 'react-redux'
 import LayoutEffect from './Components/LayoutEffect'
 import MemoEx from './Components/MemoEx'
+import CallbackEx from './Components/CallbackEx'
+import CustomEx from './Components/CustomEx'
 
 
 
@@ -43,6 +45,8 @@ function App() {
               <Link to="/redux">Redux Toolkit</Link>
               <Link to="/layouteffect"> Layout Effect </Link>
               <Link to="/memoex"  >MemeoEX</Link>
+              <Link to='/callbackex'> CallbackEx </Link>
+              <Link to='/customhook' >Custom Hook</Link>
 
 
               <Routes>
@@ -58,6 +62,8 @@ function App() {
                 <Route path='redux' element={<Todos />}  ></Route>
                 <Route path='layouteffect' element={<LayoutEffect></LayoutEffect>} ></Route>
                 <Route path='memoex' element={<MemoEx></MemoEx>} ></Route>
+                <Route path='callbackex' element={<CallbackEx></CallbackEx>}  ></Route>
+                <Route path='customhook'  element={ <CustomEx></CustomEx> } ></Route>
 
               </Routes>
 
