@@ -2,7 +2,7 @@ import React from 'react'
 import useFetch from '../CustomHooks/useFetch'
 
 const CustomEx = () => {
-   const data =  useFetch('https://jsonplaceholder.typicode.com/posts')
+   const data =  useFetch('https://jsonplaceholder.typicode.com/users')
    
   return (
     <div>
